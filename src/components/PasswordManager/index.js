@@ -156,7 +156,7 @@ class PasswordManager extends Component {
           <div className="heading-count-search-container">
             <div className="heading-and-count">
               <h1 className="your-psw-heading">Your Passwords</h1>
-              <p className="count-of-psws">{passwordCount.toString()}</p>
+              <p className="count-of-psws">{passwordCount}</p>
             </div>
             <div className="searchbar">
               <img

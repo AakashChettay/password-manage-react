@@ -3,6 +3,7 @@ import './index.css'
 const PasswordItem = props => {
   const {passwordItem, showPasswords, handleDeletePassword} = props
   const {websiteAddress, username, password, id} = passwordItem
+
   const deletePassword = () => {
     handleDeletePassword(id)
   }
@@ -14,7 +15,14 @@ const PasswordItem = props => {
         <p className="webAdd">{websiteAddress}</p>
         <p className="usrname">{username}</p>
         <p className="pswd">
-          {showPasswords ? password : '*'.repeat(password.length)}
+          {showPasswords ? (
+            password.toString()
+          ) : (
+            <img
+              alt="stars"
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+            />
+          )}
         </p>
       </div>
       <button
